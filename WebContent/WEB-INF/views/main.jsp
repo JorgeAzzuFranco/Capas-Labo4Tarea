@@ -32,7 +32,7 @@
           </tr>
           <tr>
           <tr>
-              <td>Date:</td>
+              <td>Expiration Date:</td>
               <td><form:input type="text" name="date" path="date"/></td>
               <td><form:errors path="date" cssStyle="color: #ff0000;" /></td>
           </tr>
