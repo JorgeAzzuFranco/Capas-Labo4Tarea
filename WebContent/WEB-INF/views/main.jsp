@@ -3,36 +3,41 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Summoners</title>
+<title>Products</title>
 </head>
 <body>
-	<h1>LoL Summoner Inscriptions</h1>
+	<h1>Product Registration</h1>
 	
-	<form:form method="post" action="${pageContext.request.contextPath}/validar" modelAttribute="User">
+	<form:form method="post" action="${pageContext.request.contextPath}/ingresar" modelAttribute="product">
 		<table>
           <tr>
               <td>Name:</td>
               <td><form:input type="text" name="name" path="name"/></td>
               <td><form:errors path="name" cssStyle="color: #ff0000;" /></td>
-              
           </tr>
           <tr>
-              <td>Surname:</td>
-              <td><form:input type="text" name="surname" path="surname"/></td>
-              <td><form:errors path="surname" cssStyle="color: #ff0000;" /></td>
+              <td>Brand:</td>
+              <td><form:input type="text" name="brand" path="brand"/></td>
+              <td><form:errors path="brand" cssStyle="color: #ff0000;" /></td>
           </tr>
           <tr>
-              <td>LoL User:</td>
-              <td><form:input type="text" name="lolUser" path="lolUser"/></td>
-              <td><form:errors path="lolUser" cssStyle="color: #ff0000;" /></td>
+              <td>Description:</td>
+              <td><form:input type="text" name="description" path="description"/></td>
+              <td><form:errors path="description" cssStyle="color: #ff0000;" /></td>
           </tr>
           <tr>
-              <td>Server:</td>
-              <td><form:input type="text" name="server" path="server"/></td>
-              <td><form:errors path="server" cssStyle="color: #ff0000;" /></td>
+              <td>Price:</td>
+              <td><form:input type="text" name="price" path="price"/></td>
+              <td><form:errors path="price" cssStyle="color: #ff0000;" /></td>
           </tr>
           <tr>
-              <td colspan="2">
+          <tr>
+              <td>Date:</td>
+              <td><form:input type="text" name="date" path="date"/></td>
+              <td><form:errors path="date" cssStyle="color: #ff0000;" /></td>
+          </tr>
+          <tr>
+              <td>
                   <input type="submit" value="Save Changes" />
               </td>
           </tr>

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import Classes.User;
+import Classes.Product;
 
 @Controller
 public class MainController {
@@ -16,22 +16,20 @@ public class MainController {
 	@RequestMapping("/")
 	public ModelAndView initMain() {
 		ModelAndView mav = new ModelAndView();
-		User user = new User();
-		mav.addObject("User",user);
+		Product product = new Product();
+		mav.addObject("product",product);
 		mav.setViewName("main");
 		
 		return mav;
 	}
 	
-	@RequestMapping("/validar")
-	public ModelAndView validar(@Valid @ModelAttribute User user, BindingResult result) {
+	@RequestMapping("/ingresar")
+	public ModelAndView validar(@Valid @ModelAttribute Product product, BindingResult result) {
 		ModelAndView mav = new ModelAndView();
 		if(result.hasErrors()) {
 			mav.setViewName("main");
-			mav.addObject("User", user);
 		}
 		else {
-			mav.addObject("usr", user.getLolUser());
 			mav.setViewName("success");
 		}
 		return mav;

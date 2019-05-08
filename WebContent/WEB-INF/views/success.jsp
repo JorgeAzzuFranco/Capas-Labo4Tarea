@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>Success!</h1>
-	<h3>${usr} is registered!</h3>
+	<h3>The product is registered!</h3>
 </body>
 </html>
