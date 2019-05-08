@@ -13,7 +13,7 @@ public class Product {
 	String brand;
 	@Size(min=1,max=30,message="This box cannot be empty.")
 	String description;
-	@Size(min=1,max=30,message="This box cannot be empty.")
+	@Pattern(regexp = "^\\d+$", message="Invalid Number")
 	String price;
 	@Pattern(regexp = "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))$", message="Invalid date. Format: yyyy-mm-dd")
 	@DateTimeFormat(pattern="yyyy-MM-dd")
